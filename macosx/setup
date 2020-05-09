@@ -7,7 +7,7 @@ brew install boost
 brew install boost-python --with-python3
 brew install tmux reattach-to-user-namespace
 
-export GOROOT=/usr/local/opt/go/libexec
+export GOROOT=/usr/local/opt/go
 export PATH=$PATH:$GOROOT/bin
 
 go get -u golang.org/x/tools/cmd/goimports
