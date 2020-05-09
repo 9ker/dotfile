@@ -1,0 +1,22 @@
+# Docker/Docker Compose aliases and functions
+_dsh() {
+    local cur prev opts
+    COMPREPLY=()
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    prev="${COMP_WORDS[COMP_CWORD-1]}"
+    opts=$(docker ps --filter status=running --format='{{.Names}}')
+    if [[ ${cur} == * ]] ; then
+        COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
+        return 0
+    fi
+}
+
+dsh() { docker exec -it "$1" bash; }
+alias dps='docker ps -a'
+alias d='docker'
+alias dcm='docker-compose'
+alias dcl='d rmi $(d images -f "dangling=true" -q)'
+alias dcc='dps -aq --no-trunc -f status=exited | xargs docker rm'
+complete -F _dsh dsh
+complete -F _docker d
+complete -F _docker_compose dcm

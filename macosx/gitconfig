@@ -1,0 +1,18 @@
+[user]
+        name = Joe Kuo
+        email = joe.ckuo@gmail.com
+[push]
+        default = upstream
+[color]
+        ui = auto
+[alias]
+        co = checkout
+        br = branch
+        ci = commit
+        st = status
+        a = add
+        d = diff
+        unstage = reset HEAD --
+        last = log -1 HEAD
+[core]
+	editor = /usr/bin/vim

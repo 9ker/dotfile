@@ -1,0 +1,60 @@
+#
+# [Mac OS X] Aliases
+#
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ......='cd ../../../../..'
+alias ~='cd ~'
+alias -- -='cd -'
+
+alias ls='ls -G'
+alias ll='ls -ahFl'
+alias vim='/usr/local/bin/vim'
+alias vimdiff='/usr/local/bin/vimdiff'
+alias epo='date +%s'
+alias rc=". $HOME/.profile"
+alias chrome='open -a "/Applications/Google Chrome.app"'
+alias findd='find . -type d -name'
+alias findf='find . -type f -name'
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+alias sshp='ssh -oPubkeyAuthentication=no'
+alias scpp='scp -oPubkeyAuthentication=no'
+alias sftpp='sftp -oPubkeyAuthentication=no'
+alias inet='netstat -rn -finet'
+
+# Git aliases
+alias ga='git add'
+alias gd='git diff'
+alias gst='git status'
+alias gmg='git merge'
+alias grb='git rebase'
+alias gsh='git stash'
+alias gsl='git stash list --date=relative'
+alias gsp='git stash pop'
+alias gaa='git add -A'
+alias gap='git add -p'
+alias gpl='git pull'
+alias gph='git push'
+alias gdf='git diff'
+alias gds='git diff --staged'
+alias gci='git commit'
+alias gco='git checkout'
+alias gbr='git branch'
+alias glg='git log'
+alias glp='git log --pretty=format:"%h %s" --graph'
+alias glt='git log -1 HEAD'
+alias gid='git rev-parse --short HEAD'
+alias gcl='git fetch -p && for branch in `git branch -vv | grep '"'"': gone]'"'"' | awk '"'"'{print $1}'"'"'`; do git branch -D $branch; done'
+
+# Vagrant aliases
+alias v='vagrant'
+alias vst='vagrant status'
+alias vgst='vagrant global-status'
+complete -F _vagrant v
+
+# Kubectl aliases
+alias kc='kubectl'
+complete -F __start_kubectl kc

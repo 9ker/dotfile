@@ -1,0 +1,6 @@
+#
+# [Mac OS X] .profile
+#
+
+# Get the aliases and functions
+[ -s "$HOME/.bashrc" ] && . "$HOME/.bashrc"
