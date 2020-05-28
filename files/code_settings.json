@@ -1,0 +1,35 @@
+{
+    "[markdown]": {
+        "editor.formatOnSave": true,
+        "editor.wordWrap": "on",
+        "editor.renderWhitespace": "all",
+        "editor.acceptSuggestionOnEnter": "off"
+    },
+    "go.formatTool": "gofmt",
+    "[go]": {
+        "editor.formatOnSave": true
+    },
+    "dart.flutterSdkPaths": [
+        "/usr/local/flutter/bin"
+    ],
+    "editor.detectIndentation": true,
+    "editor.fontFamily": "Monaco",
+    "editor.fontSize": 14,
+    "editor.fontWeight": "400",
+    "editor.insertSpaces": true,
+    "editor.renderWhitespace": "all",
+    "editor.rulers": [
+        80,
+        120
+    ],
+    "editor.suggestSelection": "first",
+    "editor.tabSize": 4,
+    "files.trimTrailingWhitespace": true,
+    "go.useLanguageServer": true,
+    "python.jediEnabled": false,
+    "telemetry.enableTelemetry": false,
+    "window.title": "${activeEditorLong}${separator}${rootName}",
+    "workbench.colorTheme": "OneDark Dark+",
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.startupEditor": "none",
+}
